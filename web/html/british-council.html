@@ -130,9 +130,19 @@
   }
 </script>
 
+<style>
+  #google_translate_element,.skiptranslate{
+      display: none;
+  }
+  body {
+      top: 0!important;
+  }
+
+</style>
+
 </head>
 
-<body id="page-institution" class="bg-gray-xxlight">
+<body id="page-institution" class="bg-gray-xxlight" onload="googleTranslateElementInit()">
   <div class="contain-page bg-gray-xxlight">
       
               <section id="news-banner" data-name="NEWS_BANNER" data-detail='{ "cookie": true }'>
@@ -7997,6 +8007,18 @@
   
       
     <div data-template="notifications"></div>
+    <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en',includedLanguages: 'hi'}, 'google_translate_element');
+  var a = document.querySelector("#google_translate_element select");
+            a.selectedIndex = 1;
+            a.dispatchEvent(new Event('change'));
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   
     <script data-cfasync="false" src="../images/email-decode.min.js"></script><script src="../images/analytics.2edefc668ab4db842c41.js"></script>
